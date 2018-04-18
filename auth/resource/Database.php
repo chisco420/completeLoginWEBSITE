@@ -5,6 +5,20 @@
  * Date: 4/16/2018
  * Time: 3:39 PM
  */
-$db = new PDO('mysql:host=localhost; dbname=register', 'yoga', '1234');
+$username = 'yoga';
+$dsn = 'mysql:host=localhost; dbname=register';
+$password = '1234';
 
-echo "Connected to the REGISTER database";
+
+
+try
+{
+    $db = new PDO($dsn, $username, $password);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    //echo "Connected to the REGISTER database";
+}
+catch (PDOException $ex)
+{
+    echo "Connection Failed: " .$ex ->getMessage();
+}

@@ -1,14 +1,14 @@
 
 
 <?php
-$page_title = "User Authentication - Register Page";
+$page_title = "User Authentication - Password Reset";
 include_once 'partials/headers.php';
-include_once 'partials/parseSignUp.php'
+include_once 'partials/parseForgotPassword.php'
 ?>
 
 <div class="container">
     <section class="col col-lg-7">
-        <h2>Registration Form</h2><hr>
+        <h2>Password Reset Form</h2><hr>
 
         <div>
             <?php if(isset($result)) echo $result; ?>
@@ -18,21 +18,22 @@ include_once 'partials/parseSignUp.php'
 
         <form action="" method="post">
             <div class="form-group">
-                <label for="emailField">Email</label>
+                <label for="emailField">Email address</label>
                 <input type="text" class="form-control" name="email" id="emailField" placeholder="Email">
             </div>
+
             <div class="form-group">
-                <label for="UserField">User name</label>
-                <input type="text" class="form-control" name="username" id="usernameField" placeholder="User name">
+                <label for="new_passwordField">New password</label>
+                <input type="password" class="form-control" name="new_password" id="new_passwordField" placeholder="Password">
             </div>
 
             <div class="form-group">
-                <label for="passwordField">Password</label>
-                <input type="password" class="form-control" name="password" id="passwordField" placeholder="Password">
+                <label for="confirm_passwordField">Confirm password</label>
+                <input type="password" class="form-control" name="confirm_password" id="confirm_passwordField" placeholder="Confirm password">
             </div>
 
 
-            <button type="submit" name="signupBtn" class="btn btn-primary pull-right">Sign Up</button>
+            <button type="submit" name="passwordResetBtn" class="btn btn-primary pull-right">Reset Password</button>
         </form>
 
     </section>

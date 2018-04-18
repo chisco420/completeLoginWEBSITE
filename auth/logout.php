@@ -1,7 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Francisco
- * Date: 4/16/2018
- * Time: 3:41 PM
- */
+include_once 'resource/session.php';
+include_once 'resource/utilities.php';
+session_destroy();
+
+redirectTo("index");
