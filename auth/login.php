@@ -1,6 +1,3 @@
-
-
-
 <?php
 $page_title = "User Authentication - Login Page";
 include_once 'partials/headers.php';
@@ -30,14 +27,13 @@ include_once 'partials/parseLogIn.php';
                     <input name="remember" type="checkbox"> Remember Me
                 </label>
             </div>
-            <a href="forgotpassword.php">Forgot password?</a>
+            <a href="passwordreset.php">Forgot password?</a>
 
             <button type="submit" name="loginBtn" class="btn btn-primary pull-right">Sign In</button>
         </form>
 
     </section>
     <p><a href="index.php">Back</a></p>
-
 </div>
 
 <?php include_once 'partials/footers.php';?>
