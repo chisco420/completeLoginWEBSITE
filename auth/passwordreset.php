@@ -1,9 +1,7 @@
-
-
 <?php
 $page_title = "User Authentication - Password Reset";
 include_once 'partials/headers.php';
-include_once 'partials/parsePasswordReset.php'
+include_once 'partials/parsePasswordReset.php';
 ?>
 
 <div class="container">

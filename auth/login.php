@@ -24,7 +24,7 @@ include_once 'partials/parseLogIn.php';
             </div>
             <div class="checkbox">
                 <label>
-                    <input name="remember" type="checkbox"> Remember Me
+                    <input name="remember" value="yes" type="checkbox"> Remember Me
                 </label>
             </div>
             <a href="passwordreset.php">Forgot password?</a>

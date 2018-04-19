@@ -1,6 +1,4 @@
 <?php
-
-
 /**
  * @param $required_fields_array, an array containing the list of all required fields
  * @return array, containing all errors
@@ -40,7 +38,6 @@ function check_min_length($fields_to_check_length)
 
 }
 
-
 /**
  * @param $data
  * @return array
@@ -71,7 +68,6 @@ function check_email($data)
     return $form_errors;
 }
 
-
 /**
  * @param $form_errors_array, array holding the errors
  * @return string, list with all the error messages
@@ -89,15 +85,16 @@ function show_errors($form_errors_array)
     return $errors;
 }
 
-
-function debug_to_console( $data ) {
+/**
+ * @param $data
+ */
+function debug_to_console($data ) {
     $output = $data;
     if ( is_array( $output ) )
         $output = implode( ',', $output);
 
     echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
 }
-
 
 /**
  * @param $message
@@ -118,11 +115,21 @@ function flashMessage($message, $passOrFail = "Fail")
     return $data;
 }
 
+/**
+ * @param $page
+ */
 function redirectTo($page)
 {
     header("Location: {$page}.php");
 }
 
+/**
+ * @param $table
+ * @param $column_name
+ * @param $value
+ * @param $db
+ * @return bool
+ */
 function checkDuplicateEntries($table, $column_name, $value, $db)
 {
     try
@@ -146,6 +153,67 @@ function checkDuplicateEntries($table, $column_name, $value, $db)
     }
 }
 
+/**
+ * @param $user_id
+ */
+function rememberMe($user_id)
+{
+    $encryptCookieData = base64_encode("TEST420fgm{$user_id}");
+    //Cookie set to expire in about 30 days
+    setcookie("rememberUserCookie", $encryptCookieData, time()+60*60*24*100, "/");
+}
 
+/**
+ * @param $db
+ * @return bool
+ */
+function isCookieValid($db)
+{
+    $isValid = false;
+    if (isset($_COOKIE['rememberUserCookie']))
+    {
+        //Decode cookies and extract user id
+        $decryptedCookieData = base64_decode($_COOKIE['rememberUserCookie']);
+        $user_id = explode("TEST420fgm",$decryptedCookieData);
+        $userID = $user_id[1];
 
+        $sqlQuery = "SELECT * FROM users where id= :id";
+        $statement = $db-> prepare($sqlQuery);
+        $statement-> execute(array(':id' => $userID));
 
+        if ($row = $statement-> fetch())
+        {
+            $id = $row['id'];
+            $username = $row['username'];
+
+            //Create the user session variable
+            $_SESSION['id'] = $id;
+            $_SESSION['username'] = $username;
+            $isValid = true;
+        }
+        else
+        {
+            //Cookie id is invalid, destroy session and logout user
+            $isValid = false;
+            $this->signOut();
+        }
+    }
+    return $isValid;
+}
+
+/**
+ *
+ */
+function signOut()
+{
+    unset($_SESSION['username']);
+    unset($_SESSION['id']);
+    if (isset($_COOKIE['rememberUserCookie']))
+    {
+        unset($_COOKIE['rememberUserCookie']);
+        setcookie('rememberUserCookie', null, -1, '/');
+    }
+    session_regenerate_id(true);
+    session_destroy();
+    redirectTo('index');
+}
