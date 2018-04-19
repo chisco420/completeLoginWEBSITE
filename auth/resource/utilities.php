@@ -213,7 +213,33 @@ function signOut()
         unset($_COOKIE['rememberUserCookie']);
         setcookie('rememberUserCookie', null, -1, '/');
     }
-    session_regenerate_id(true);
+    //session_regenerate_id(true);
     session_destroy();
     redirectTo('index');
+}
+
+
+function guard()
+{
+    $isValid = true;
+    $inactive = 60*2; //2 mins
+    $fingerprint = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
+
+    if (isset($_SESSION['fingerprint']) && $_SESSION['fingerprint'] != $fingerprint)
+    {
+        $isValid = false;
+        signOut();
+    }
+    else if ((isset($_SESSION['last_active'])
+        && (time() - $_SESSION['last_active']) > $inactive)
+        && isset($_SESSION['username']))
+    {
+        $isValid = false;
+        signOut();
+    }
+    else
+    {
+        $_SESSION['last_active'] = time();
+    }
+    return $isValid;
 }

@@ -22,7 +22,7 @@ if(isset($_POST['loginBtn']))
         $password = $_POST['password'];
 
         //if remember me was selected
-        isset($_POST['remember']) ? $remember = $_POST['remember'] : $remember = "";
+        ISSET($_POST['remember']) ? $remember = $_POST['remember'] : $remember = "";
 
         //check if user exist in DB
         $sqlQuery = "SELECT * FROM users WHERE username= :username";
@@ -40,7 +40,12 @@ if(isset($_POST['loginBtn']))
                 $_SESSION['id'] = $id;
                 $_SESSION['username'] = $username;
 
-                if ($remember === "yes")
+                $fingerprint = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
+                $_SESSION['last_active'] = time();
+                $_SESSION['fingerprint'] = $fingerprint;
+
+                //Remember me functionality
+                IF ($remember === "yes")
                 {
                     rememberMe($id);
                 }

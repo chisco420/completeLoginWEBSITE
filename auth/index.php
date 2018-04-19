@@ -13,6 +13,14 @@ include_once 'partials/headers.php';
             <p class="lead">You are logged in as <?php if (isset($_SESSION['username'])) echo $_SESSION['username']; ?> <a href="logout.php">Logout</a> </p>
         <?php endif ?>
 
+        <?php echo $_SERVER['REMOTE_ADDR'] . "<br>" . $_SERVER['HTTP_USER_AGENT'];
+        echo "<br>" .time();
+        if (isset($_SESSION['last_active']))
+        {
+            echo "<br>" .$_SESSION['last_active'];
+        };
+        ?>
+
     </div>
 
 </div>
