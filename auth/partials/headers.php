@@ -40,7 +40,7 @@ include_once 'resource/utilities.php';?>
                 <i class="hide"><?php echo guard();?></i>
                 <li><a href="index.php">Home</a></li>
                 <?php if ((isset($_SESSION['username']) || isCookieValid($db))): ?>
-                    <li><a href="#">My Profile</a></li>
+                    <li><a href="profile.php">My Profile</a></li>
                     <li><a href="logout.php">Log out</a></li>
                 <?php else: ?>
                     <li><a href="#">About</a></li>

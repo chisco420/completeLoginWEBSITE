@@ -84,7 +84,8 @@ if (isset($_POST['passwordResetBtn']))
                     }
             }
             catch(PDOException $ex){
-                $result = "<p style='padding: 20px; border: 1px solid gray; color: red;'> An error occurred: ".$ex -> getMessage()."</p>";
+                //$result = "<p style='padding: 20px; border: 1px solid gray; color: red;'> An error occurred: ".$ex -> getMessage()."</p>";
+                $result = flashMessage("An error occurred: ".$ex -> getMessage());
             }
         }
     }
