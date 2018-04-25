@@ -23,6 +23,19 @@ if ((isset($_SESSION['id']) || isset($_GET['user_identity'])) && !isset($_POST['
         $date_joined = strftime("%b %d, %Y", strtotime($rs["join_date"]));
     }
 
+    $user_pic = "uploads/".$username.".jpg";
+    $default = "uploads/default.jpg";
+
+    if (file_exists($user_pic))
+    {
+        $profile_picture= $user_pic;
+    }
+    else
+    {
+        $profile_picture = $default;
+    }
+
+
     $encode_id = base64_encode("encodeuserid{$id}");
 
 }
@@ -56,6 +69,14 @@ else if (isset($_POST['updateProfileBtn']))
     //email validation
     $form_errors = array_merge($form_errors, check_email($_POST));
 
+    //validate if the image is valid
+    isset($_FILES['avatar']['name']) ? $avatar = $_FILES['avatar']['name'] : $avatar = null;
+
+    if ($avatar != null)
+    {
+        $form_errors = array_merge($form_errors, isValidImage($avatar));
+    }
+
     //collect form data
     $email = $_POST['email'];
     $username= $_POST['username'];
@@ -75,7 +96,7 @@ else if (isset($_POST['updateProfileBtn']))
             $statement -> execute(array(':username' => $username, ':email' => $email, ':id' => $hidden_id));
 
             //check if one new row was created
-            if ($statement -> rowCount() == 1)
+            if ($statement -> rowCount() == 1 || uploadAvatar($username))
             {
                 $result = "<script type=\"text/javascript\">
                 swal(\"Updated!\",\"Profile Updated Successfully.\", \"success\");</script>";

@@ -17,7 +17,7 @@ include_once  'partials/parseProfile.php';
             <P class="lead">You are not authorized to view this page <a href="login.php">Login</a>
             Not yet a member? <a href="signup.php">Sign Up</a> </P>
         <?php else: ?>
-            <form method="post" action="">
+            <form method="post" action="" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="emailField">Email</label>
                     <input type="text"
@@ -35,6 +35,15 @@ include_once  'partials/parseProfile.php';
                            id="usernameField"
                            value="<?php if (isset($username)) echo $username;?>">
                 </div>
+
+                <div class="form-group">
+                    <label for="fileField">Avatar</label>
+                    <input type="file"
+                           name="avatar"
+                           id="fileField">
+                </div>
+
+
                 <input type="hidden" name="hidden_id" value="<?php if(isset($id)) echo $id;?>">
                 <button type="submit" name="updateProfileBtn" class="btn btn-primary pull-right">Update Profile</button>
             </form>
