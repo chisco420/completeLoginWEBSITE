@@ -27,7 +27,7 @@ include_once 'partials/parseLogIn.php';
                     <input name="remember" value="yes" type="checkbox"> Remember Me
                 </label>
             </div>
-            <a href="passwordreset.php">Forgot password?</a>
+            <a href="password_recovery_link.php">Forgot password?</a>
 
             <button type="submit" name="loginBtn" class="btn btn-primary pull-right">Sign In</button>
         </form>

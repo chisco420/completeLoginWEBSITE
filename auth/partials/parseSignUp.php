@@ -70,8 +70,8 @@ if(isset($_POST['signupBtn']))
                 <h2>User Authentication: Code A Secured Login System</h2>
                 <p>Dear '.$username.'<br><br>Thank you for registering, please click on the link below to
                     confirm your email address</p>
-                <p><a href="http://localhost/auth/activate.php?id='.$encode_id.'"> Confirm Email</a></p>
-                <p><strong>&copy;2016 ICT DesighHUB</strong></p>
+                <p><a href="http://localhost/auth/activate.php?id='.$encode_id.'">Confirm Email</a></p>
+                <p><strong>&copy;2018 Family Recipes</strong></p>
                 </body>
                 </html>';
 
@@ -90,15 +90,10 @@ if(isset($_POST['signupBtn']))
                             swal({
                             title: \"Congratulations $username!\",
                             text: \"Registration Completed Successfully. Please check your email for confirmation link\",
-                            type: 'success',
+                            type: \"success\",
                             confirmButtonText: \"Thank You!\" });
                         </script>";
                 }
-
-
-
-
-
 
                 //call sweet alert
                 $result= "<script type=\"text/javascript\">

@@ -2,6 +2,14 @@
 $page_title = "User Authentication - Password Reset";
 include_once 'partials/headers.php';
 include_once 'partials/parsePasswordReset.php';
+
+if (isset($_GET['id']))
+{
+    $encoded_id = $_GET['id'];
+    $decoded_id = base64_decode($encoded_id);
+    $id_array = explode("encodeuserid",$decoded_id);
+    $id = $id_array[1];
+}
 ?>
 
 <div class="container">
@@ -15,10 +23,6 @@ include_once 'partials/parsePasswordReset.php';
         <div class="clearfix"></div>
 
         <form action="" method="post">
-            <div class="form-group">
-                <label for="emailField">Email address</label>
-                <input type="text" class="form-control" name="email" id="emailField" placeholder="Email">
-            </div>
 
             <div class="form-group">
                 <label for="new_passwordField">New password</label>
@@ -29,7 +33,7 @@ include_once 'partials/parsePasswordReset.php';
                 <label for="confirm_passwordField">Confirm password</label>
                 <input type="password" class="form-control" name="confirm_password" id="confirm_passwordField" placeholder="Confirm password">
             </div>
-
+            <input type="hidden" name="user_id" value="<?php if(isset($id)) echo $id?>">
 
             <button type="submit" name="passwordResetBtn" class="btn btn-primary pull-right">Reset Password</button>
         </form>

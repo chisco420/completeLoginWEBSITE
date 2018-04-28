@@ -27,7 +27,7 @@ if (isset($_POST['loginBtn'])) {
         $statement = $db->prepare($sqlQuery);
         $statement->execute(array(':username' => $user));
 
-        while ($row = $statement->fetch()) {
+        if ($row = $statement->fetch()) {
             $id = $row['id'];
             $hashed_password = $row['password'];
             $username = $row['username'];
@@ -65,9 +65,13 @@ if (isset($_POST['loginBtn'])) {
                                         }, 3000);
                                 </script>";
                 } ELSE {
-                    $result = flashMessage("Invalid username or password");
+                    $result = flashMessage("You have entered an invalid password");
                 }
             }
+        }
+        else
+        {
+            $result = flashMessage("You have entered an invalid username");
         }
     } //check if user exist in DB
     else {
