@@ -28,7 +28,7 @@ include_once 'partials/parseLogIn.php';
                 </label>
             </div>
             <a href="password_recovery_link.php">Forgot password?</a>
-
+            <input type="hidden" name="token" value="<?php if(function_exists('_token')) echo _token();?>">
             <button type="submit" name="loginBtn" class="btn btn-primary pull-right">Sign In</button>
         </form>
 

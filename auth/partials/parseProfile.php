@@ -39,91 +39,105 @@ if ((isset($_SESSION['id']) || isset($_GET['user_identity'])) && !isset($_POST['
     $encode_id = base64_encode("encodeuserid{$id}");
 
 }
-else if (isset($_POST['updateProfileBtn']))
+else if (isset($_POST['updateProfileBtn'], $_POST['token']))
 {
-
-    if (isset($_GET['user_identity'])) {
-        $url_encoded_id = $_GET['user_identity'];
-        $decode_id = base64_decode($url_encoded_id);
-        $user_id_array = explode("encodeuserid", $decode_id);
-        $id = $user_id_array[1];
-    } else {
-        $id = $_SESSION['id'];
-    }
-
-
-
-    //initialize an array to store any error message from the form
-    $form_errors = array();
-
-    //form validation
-    $required_fields = array('email', 'username');
-
-    //check for empty fields
-    $form_errors = array_merge($form_errors, check_empty_fields($required_fields));
-
-    //check min length
-    $field_to_check_length = array('username' => 4);
-    $form_errors = array_merge($form_errors, check_min_length($field_to_check_length));
-
-    //email validation
-    $form_errors = array_merge($form_errors, check_email($_POST));
-
-    //validate if the image is valid
-    isset($_FILES['avatar']['name']) ? $avatar = $_FILES['avatar']['name'] : $avatar = null;
-
-    if ($avatar != null)
+    //validate the token
+    if (validateToken($_POST['token']))
     {
-        $form_errors = array_merge($form_errors, isValidImage($avatar));
-    }
+        if (isset($_GET['user_identity'])) {
+            $url_encoded_id = $_GET['user_identity'];
+            $decode_id = base64_decode($url_encoded_id);
+            $user_id_array = explode("encodeuserid", $decode_id);
+            $id = $user_id_array[1];
+        } else {
+            $id = $_SESSION['id'];
+        }
 
-    //collect form data
-    $email = $_POST['email'];
-    $username= $_POST['username'];
-    $hidden_id = $_POST['hidden_id'];
+        //initialize an array to store any error message from the form
+        $form_errors = array();
 
-    if (empty($form_errors))
-    {
-        try
+        //form validation
+        $required_fields = array('email', 'username');
+
+        //check for empty fields
+        $form_errors = array_merge($form_errors, check_empty_fields($required_fields));
+
+        //check min length
+        $field_to_check_length = array('username' => 4);
+        $form_errors = array_merge($form_errors, check_min_length($field_to_check_length));
+
+        //email validation
+        $form_errors = array_merge($form_errors, check_email($_POST));
+
+        //validate if the image is valid
+        isset($_FILES['avatar']['name']) ? $avatar = $_FILES['avatar']['name'] : $avatar = null;
+
+        if ($avatar != null)
         {
-            //create SQL update
-            $sqlUpdate = "UPDATE users SET username= :username, email=:email WHERE id= :id";
+            $form_errors = array_merge($form_errors, isValidImage($avatar));
+        }
 
-            //Use PDO prepared to sanitize data
-            $statement = $db ->prepare($sqlUpdate);
+        //collect form data
+        $email = $_POST['email'];
+        $username= $_POST['username'];
+        $hidden_id = $_POST['hidden_id'];
 
-            //update the record in the database
-            $statement -> execute(array(':username' => $username, ':email' => $email, ':id' => $hidden_id));
-
-            //check if one new row was created
-            if ($statement -> rowCount() == 1 || uploadAvatar($username))
+        if (empty($form_errors))
+        {
+            try
             {
-                $result = "<script type=\"text/javascript\">
+                //create SQL update
+                $sqlUpdate = "UPDATE users SET username= :username, email=:email WHERE id= :id";
+
+                //Use PDO prepared to sanitize data
+                $statement = $db ->prepare($sqlUpdate);
+
+                //update the record in the database
+                $statement -> execute(array(':username' => $username, ':email' => $email, ':id' => $hidden_id));
+
+                //check if one new row was created
+                if ($statement -> rowCount() == 1 || uploadAvatar($username))
+                {
+                    $result = "<script type=\"text/javascript\">
                 swal(\"Updated!\",\"Profile Updated Successfully.\", \"success\");</script>";
+                }
+                else
+                {
+                    $result = "<script type=\"text/javascript\">
+                swal(\"Nothing happened!\",\"You have not made any changes.\");</script>";
+                }
+
+            }
+            catch(PDOException $ex)
+            {
+                $result = flashMessage("An error occurred: ".$ex -> getMessage());
+            }
+        }
+        else
+        {
+            if (count($form_errors) == 1)
+            {
+                $result = flashMessage("There was 1 error in the form<br>");
             }
             else
             {
-                $result = "<script type=\"text/javascript\">
-                swal(\"Nothing happened!\",\"You have not made any changes.\");</script>";
+                $result = flashMessage( "There were " .count($form_errors). " errors in the form<br>");
             }
-
-        }
-        catch(PDOException $ex)
-        {
-            $result = flashMessage("An error occurred: ".$ex -> getMessage());
         }
     }
     else
     {
-        if (count($form_errors) == 1)
-        {
-            $result = flashMessage("There was 1 error in the form<br>");
-        }
-        else
-        {
-            $result = flashMessage( "There were " .count($form_errors). " errors in the form<br>");
-        }
+        //throw an error
+        $result = "<script type='text/javascript'>
+                    swal({
+                        text: 'This request originates from an unknown source, possible attack',
+                        title: 'Error',
+                        icon: 'error',
+                        button: 'Ok!'
+                    })
+                    </script>";
     }
+
 
 
 }

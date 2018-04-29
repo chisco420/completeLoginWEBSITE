@@ -34,7 +34,7 @@ if (isset($_GET['id']))
                 <input type="password" class="form-control" name="confirm_password" id="confirm_passwordField" placeholder="Confirm password">
             </div>
             <input type="hidden" name="user_id" value="<?php if(isset($id)) echo $id?>">
-
+            <input type="hidden" name="token" value="<?php if(function_exists('_token')) echo _token();?>">
             <button type="submit" name="passwordResetBtn" class="btn btn-primary pull-right">Reset Password</button>
         </form>
 

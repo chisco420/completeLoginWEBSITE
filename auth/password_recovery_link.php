@@ -19,6 +19,7 @@ include_once  'partials/parsePasswordReset.php';
                 <label for="emailField">Email Address</label>
                 <input type="text" class="form-control" name="email" id="emailField" placeholder="email">
             </div>
+            <input type="hidden" name="token" value="<?php if(function_exists('_token')) echo _token();?>">
             <button type="submit" name="passwordRecoveryBtn" class="btn btn-primary pull-right">
                 Recover Password
             </button>

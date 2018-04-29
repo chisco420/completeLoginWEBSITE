@@ -274,6 +274,10 @@ function isValidImage($file)
     return $form_errors;
 }
 
+/**
+ * @param $username
+ * @return bool
+ */
 function uploadAvatar($username)
 {
     $isImageMoved = false;
@@ -292,4 +296,21 @@ function uploadAvatar($username)
     }
 
     return $isImageMoved;
+}
+
+function _token()
+{
+    $randomToken = base64_encode(openssl_random_pseudo_bytes(32));
+    return $_SESSION['token'] = $randomToken;
+}
+
+function validateToken($requestToken)
+{
+    if (isset($_SESSION['token']) && $requestToken === $_SESSION['token'])
+    {
+        unset($_SESSION['token']);
+        return true;
+    }
+
+    return false;
 }

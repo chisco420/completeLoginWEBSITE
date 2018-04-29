@@ -45,6 +45,7 @@ include_once  'partials/parseProfile.php';
 
 
                 <input type="hidden" name="hidden_id" value="<?php if(isset($id)) echo $id;?>">
+                <input type="hidden" name="token" value="<?php if(function_exists('_token')) echo _token();?>">
                 <button type="submit" name="updateProfileBtn" class="btn btn-primary pull-right">Update Profile</button>
             </form>
         <?php endif ?>
