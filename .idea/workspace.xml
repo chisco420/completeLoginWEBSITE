@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c8a0408-bffc-4d86-9bb8-72a4b98f981a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/auth/partials/parseChangePassword.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/editProfile.php" afterPath="$PROJECT_DIR$/auth/editProfile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/index.php" afterPath="$PROJECT_DIR$/auth/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/login.php" afterPath="$PROJECT_DIR$/auth/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/partials/parseLogIn.php" afterPath="$PROJECT_DIR$/auth/partials/parseLogIn.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/partials/parsePasswordReset.php" afterPath="$PROJECT_DIR$/auth/partials/parsePasswordReset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/partials/parseProfile.php" afterPath="$PROJECT_DIR$/auth/partials/parseProfile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/partials/parseSignUp.php" afterPath="$PROJECT_DIR$/auth/partials/parseSignUp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/password_recovery_link.php" afterPath="$PROJECT_DIR$/auth/password_recovery_link.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/passwordreset.php" afterPath="$PROJECT_DIR$/auth/passwordreset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/resource/utilities.php" afterPath="$PROJECT_DIR$/auth/resource/utilities.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/signup.php" afterPath="$PROJECT_DIR$/auth/signup.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,10 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auth/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
+            <state relative-caret-position="340">
               <caret line="15" column="91" lean-forward="false" selection-start-line="15" selection-start-column="91" selection-end-line="15" selection-end-column="91" />
               <folding />
             </state>
@@ -146,12 +137,9 @@
       <file leaf-file-name="parsePasswordReset.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auth/partials/parsePasswordReset.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="58" lean-forward="true" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+            <state relative-caret-position="489">
+              <caret line="51" column="87" lean-forward="true" selection-start-line="50" selection-start-column="24" selection-end-line="51" selection-end-column="87" />
               <folding>
-                <element signature="e#268#4425#0#PHP" expanded="false" />
-                <element signature="e#807#4026#0#PHP" expanded="false" />
-                <element signature="e#1268#3716#0#PHP" expanded="false" />
                 <element signature="e#3442#3716#0#PHP" expanded="false" />
                 <element signature="e#3749#4026#0#PHP" expanded="false" />
                 <element signature="e#4037#4425#0#PHP" expanded="false" />
@@ -186,29 +174,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parseProfile.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/auth/partials/parseProfile.php">
+      <file leaf-file-name="utilities.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/auth/resource/utilities.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="768">
-              <caret line="138" column="5" lean-forward="false" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
+            <state relative-caret-position="153">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
-                <element signature="e#191#475#0#PHP" expanded="false" />
-                <element signature="e#432#475#0#PHP" expanded="false" />
-                <element signature="e#624#808#0#PHP" expanded="false" />
-                <element signature="e#898#1032#0#PHP" expanded="false" />
-                <element signature="e#979#1032#0#PHP" expanded="false" />
-                <element signature="e#1233#1545#0#PHP" expanded="false" />
-                <element signature="e#1494#1545#0#PHP" expanded="false" />
-                <element signature="e#2596#3721#0#PHP" expanded="false" />
-                <element signature="e#3587#3721#0#PHP" expanded="false" />
-                <element signature="e#3767#4050#0#PHP" expanded="false" />
-                <element signature="e#3914#4050#0#PHP" expanded="false" />
-                <marker date="1524962757381" expanded="true" signature="494:528" ph="SELECT * FRO... users" />
-                <marker date="1524962757381" expanded="true" signature="2680:2744" ph="UPDATE users... " />
-                <marker date="1524962757381" expanded="true" signature="3233:3325" ph="..." />
-                <marker date="1524962757381" expanded="true" signature="3449:3538" ph="..." />
-                <marker date="1524962757381" expanded="true" signature="4156:4450" ph="..." />
-                <marker date="1524962757381" expanded="true" signature="4183:4420" ph="{&quot;text&quot;: 'This request originates from an unknown source, possible attack'...}" />
+                <element signature="e#6#139#0#PHP" expanded="false" />
+                <element signature="n#check_empty_fields#0;n#!!top" expanded="false" />
+                <element signature="e#567#669#0#PHP" expanded="false" />
+                <element signature="e#1172#1212#0#PHP" expanded="false" />
+                <element signature="n#check_email#0;n#!!top" expanded="false" />
+                <element signature="e#1942#2056#0#PHP" expanded="false" />
+                <element signature="n#show_errors#0;n#!!top" expanded="false" />
+                <element signature="e#2348#2371#0#PHP" expanded="false" />
+                <element signature="n#debug_to_console#0;n#!!top" expanded="false" />
+                <element signature="e#2584#2657#0#PHP" expanded="false" />
+                <element signature="n#flashMessage#0;n#!!top" expanded="false" />
+                <element signature="e#2934#2957#0#PHP" expanded="false" />
+                <element signature="n#redirectTo#0;n#!!top" expanded="false" />
+                <element signature="e#3027#3121#0#PHP" expanded="false" />
+                <element signature="n#checkDuplicateEntries#0;n#!!top" expanded="false" />
+                <element signature="e#3627#3653#0#PHP" expanded="false" />
+                <element signature="n#rememberMe#0;n#!!top" expanded="false" />
+                <element signature="e#3880#3917#0#PHP" expanded="false" />
+                <element signature="n#isCookieValid#0;n#!!top" expanded="false" />
+                <element signature="e#4884#4894#0#PHP" expanded="false" />
+                <element signature="n#signOut#0;n#!!top" expanded="false" />
+                <element signature="e#5227#5250#0#PHP" expanded="false" />
+                <element signature="n#guard#0;n#!!top" expanded="false" />
+                <element signature="e#5836#5876#0#PHP" expanded="false" />
+                <element signature="n#isValidImage#0;n#!!top" expanded="false" />
+                <element signature="e#6319#6362#0#PHP" expanded="false" />
+                <marker date="1524961687702" expanded="true" signature="2126:2137" ph="..." />
+                <marker date="1524961687702" expanded="true" signature="3225:3238" ph="SELECT * FRO... " />
+                <marker date="1524961687702" expanded="true" signature="3225:3239" ph="SELECT * FRO... ${$table}" />
+                <marker date="1524961687702" expanded="true" signature="3225:3257" ph="SELECT * FRO... ${$table}" />
+                <marker date="1524961687702" expanded="true" signature="3225:3258" ph="SELECT * FRO... ${$table}" />
+                <marker date="1524961687702" expanded="true" signature="3225:3277" ph="SELECT * FRO... users" />
+                <marker date="1524961687702" expanded="true" signature="4262:4295" ph="SELECT * FRO... users" />
               </folding>
             </state>
           </provider>
@@ -218,7 +222,7 @@
         <entry file="file://$PROJECT_DIR$/auth/signup.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
-              <caret line="33" column="107" lean-forward="false" selection-start-line="33" selection-start-column="107" selection-end-line="33" selection-end-column="107" />
+              <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="107" />
               <folding>
                 <marker date="1524962500272" expanded="true" signature="141:142" ph="..." />
               </folding>
@@ -229,19 +233,36 @@
       <file leaf-file-name="editProfile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auth/editProfile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="111" />
-              <folding />
+            <state relative-caret-position="246">
+              <caret line="73" column="47" lean-forward="false" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="47" />
+              <folding>
+                <element signature="n#div#0;n#form#0;n#section#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#input#0;n#div#0;n#form#0;n#section#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#form#0;n#section#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#form#0;n#section#0;n#div#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/auth/login.php">
+      <file leaf-file-name="parseChangePassword.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/auth/partials/parseChangePassword.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="107" />
-              <folding />
+            <state relative-caret-position="290">
+              <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+              <folding>
+                <element signature="e#4324#4598#0#PHP" expanded="false" />
+                <element signature="e#4631#4908#0#PHP" expanded="false" />
+                <element signature="e#4919#5307#0#PHP" expanded="false" />
+                <marker date="1525041133905" expanded="true" signature="1390:1431" ph="SELECT passw... users" />
+                <marker date="1525041133905" expanded="true" signature="2224:2274" ph="UPDATE users... " />
+                <marker date="1525041133905" expanded="true" signature="2837:3290" ph="..." />
+                <marker date="1525041133905" expanded="true" signature="2880:3247" ph="{&quot;title&quot;: \&quot;Operation Successful!\&quot;...}" />
+                <marker date="1525041133905" expanded="true" signature="3693:4129" ph="..." />
+                <marker date="1525041133905" expanded="true" signature="3736:4086" ph="{&quot;title&quot;: \&quot;OOPS!\&quot;...}" />
+                <marker date="1525041133905" expanded="true" signature="5004:5298" ph="..." />
+                <marker date="1525041133905" expanded="true" signature="5031:5268" ph="{&quot;text&quot;: 'This request originates from an unknown source, possible attack'...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -268,6 +289,7 @@
       <find>$_get</find>
       <find>FA</find>
       <find>swal({</find>
+      <find>confirm_password</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -301,7 +323,6 @@
         <option value="$PROJECT_DIR$/auth/resource/utilities.php" />
         <option value="$PROJECT_DIR$/auth/partials/parseLogIn.php" />
         <option value="$PROJECT_DIR$/auth/partials/parseSignUp.php" />
-        <option value="$PROJECT_DIR$/auth/editProfile.php" />
         <option value="$PROJECT_DIR$/auth/login.php" />
         <option value="$PROJECT_DIR$/auth/signup.php" />
         <option value="$PROJECT_DIR$/auth/partials/parseProfile.php" />
@@ -309,6 +330,8 @@
         <option value="$PROJECT_DIR$/auth/password_recovery_link.php" />
         <option value="$PROJECT_DIR$/auth/partials/parsePasswordReset.php" />
         <option value="$PROJECT_DIR$/auth/index.php" />
+        <option value="$PROJECT_DIR$/auth/editProfile.php" />
+        <option value="$PROJECT_DIR$/auth/partials/parseChangePassword.php" />
       </list>
     </option>
   </component>
@@ -433,7 +456,7 @@
       <option name="presentableId" value="Default" />
       <updated>1523914749620</updated>
       <workItem from="1523914754185" duration="19025000" />
-      <workItem from="1524012566428" duration="68411000" />
+      <workItem from="1524012566428" duration="71768000" />
     </task>
     <task id="LOCAL-00001" summary="initial version">
       <created>1523920300160</created>
@@ -491,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524959699885</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Protect against CSRF..token">
+      <created>1524963735389</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1524963735389</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -500,12 +530,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87436000" />
+    <option name="totallyTimeSpent" value="90793000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="63" width="1933" height="1024" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18293333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1392" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.49706668" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5029333" order="1" side_tool="true" content_ui="tabs" />
@@ -547,7 +577,8 @@
     <MESSAGE value="Profile module completed" />
     <MESSAGE value="Activate user module completed" />
     <MESSAGE value="Reset password functionality using email" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reset password functionality using email" />
+    <MESSAGE value="Protect against CSRF..token" />
+    <option name="LAST_COMMIT_MESSAGE" value="Protect against CSRF..token" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -604,7 +635,6 @@
             <element signature="e#6#139#0#PHP" expanded="false" />
             <element signature="n#check_empty_fields#0;n#!!top" expanded="false" />
             <element signature="e#567#669#0#PHP" expanded="false" />
-            <element signature="n#check_min_length#0;n#!!top" expanded="false" />
             <element signature="e#1172#1212#0#PHP" expanded="false" />
             <element signature="n#check_email#0;n#!!top" expanded="false" />
             <element signature="e#1942#2056#0#PHP" expanded="false" />
@@ -818,90 +848,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auth/resource/utilities.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="733">
-          <caret line="314" column="17" lean-forward="false" selection-start-line="314" selection-start-column="17" selection-end-line="314" selection-end-column="17" />
-          <folding>
-            <element signature="e#6#139#0#PHP" expanded="false" />
-            <element signature="n#check_empty_fields#0;n#!!top" expanded="false" />
-            <element signature="e#567#669#0#PHP" expanded="false" />
-            <element signature="n#check_min_length#0;n#!!top" expanded="false" />
-            <element signature="e#1172#1212#0#PHP" expanded="false" />
-            <element signature="n#check_email#0;n#!!top" expanded="false" />
-            <element signature="e#1942#2056#0#PHP" expanded="false" />
-            <element signature="n#show_errors#0;n#!!top" expanded="false" />
-            <element signature="e#2348#2371#0#PHP" expanded="false" />
-            <element signature="n#debug_to_console#0;n#!!top" expanded="false" />
-            <element signature="e#2584#2657#0#PHP" expanded="false" />
-            <element signature="n#flashMessage#0;n#!!top" expanded="false" />
-            <element signature="e#2934#2957#0#PHP" expanded="false" />
-            <element signature="n#redirectTo#0;n#!!top" expanded="false" />
-            <element signature="e#3027#3121#0#PHP" expanded="false" />
-            <element signature="n#checkDuplicateEntries#0;n#!!top" expanded="false" />
-            <element signature="e#3627#3653#0#PHP" expanded="false" />
-            <element signature="n#rememberMe#0;n#!!top" expanded="false" />
-            <element signature="e#3880#3917#0#PHP" expanded="false" />
-            <element signature="n#isCookieValid#0;n#!!top" expanded="false" />
-            <element signature="e#4884#4894#0#PHP" expanded="false" />
-            <element signature="n#signOut#0;n#!!top" expanded="false" />
-            <element signature="e#5227#5250#0#PHP" expanded="false" />
-            <element signature="n#guard#0;n#!!top" expanded="false" />
-            <element signature="e#5836#5876#0#PHP" expanded="false" />
-            <element signature="n#isValidImage#0;n#!!top" expanded="false" />
-            <element signature="e#6319#6362#0#PHP" expanded="false" />
-            <marker date="1524961687702" expanded="true" signature="2126:2137" ph="..." />
-            <marker date="1524961687702" expanded="true" signature="3225:3238" ph="SELECT * FRO... " />
-            <marker date="1524961687702" expanded="true" signature="3225:3239" ph="SELECT * FRO... ${$table}" />
-            <marker date="1524961687702" expanded="true" signature="3225:3257" ph="SELECT * FRO... ${$table}" />
-            <marker date="1524961687702" expanded="true" signature="3225:3258" ph="SELECT * FRO... ${$table}" />
-            <marker date="1524961687702" expanded="true" signature="3225:3277" ph="SELECT * FRO... users" />
-            <marker date="1524961687702" expanded="true" signature="4262:4295" ph="SELECT * FRO... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth/editProfile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="111" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth/signup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="107" lean-forward="false" selection-start-line="33" selection-start-column="107" selection-end-line="33" selection-end-column="107" />
-          <folding>
-            <marker date="1524962500272" expanded="true" signature="141:142" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/auth/partials/parseProfile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="768">
           <caret line="138" column="5" lean-forward="false" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
-          <folding>
-            <element signature="e#191#475#0#PHP" expanded="false" />
-            <element signature="e#432#475#0#PHP" expanded="false" />
-            <element signature="e#624#808#0#PHP" expanded="false" />
-            <element signature="e#898#1032#0#PHP" expanded="false" />
-            <element signature="e#979#1032#0#PHP" expanded="false" />
-            <element signature="e#1233#1545#0#PHP" expanded="false" />
-            <element signature="e#1494#1545#0#PHP" expanded="false" />
-            <element signature="e#2596#3721#0#PHP" expanded="false" />
-            <element signature="e#3587#3721#0#PHP" expanded="false" />
-            <element signature="e#3767#4050#0#PHP" expanded="false" />
-            <element signature="e#3914#4050#0#PHP" expanded="false" />
-            <marker date="1524962757381" expanded="true" signature="494:528" ph="SELECT * FRO... users" />
-            <marker date="1524962757381" expanded="true" signature="2680:2744" ph="UPDATE users... " />
-            <marker date="1524962757381" expanded="true" signature="3233:3325" ph="..." />
-            <marker date="1524962757381" expanded="true" signature="3449:3538" ph="..." />
-            <marker date="1524962757381" expanded="true" signature="4156:4450" ph="..." />
-            <marker date="1524962757381" expanded="true" signature="4183:4420" ph="{&quot;text&quot;: 'This request originates from an unknown source, possible attack'...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -910,36 +861,6 @@
         <state relative-caret-position="510">
           <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="107" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth/partials/parseSignUp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="39" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="9" selection-end-column="39" />
-          <folding>
-            <element signature="e#1030#5082#0#PHP" expanded="false" />
-            <element signature="e#1207#5082#0#PHP" expanded="false" />
-            <element signature="e#1479#5082#0#PHP" expanded="false" />
-            <element signature="e#1636#4743#0#PHP" expanded="false" />
-            <element signature="e#4622#4743#0#PHP" expanded="false" />
-            <element signature="e#4762#5082#0#PHP" expanded="false" />
-            <marker date="1524962384874" expanded="true" signature="1671:1795" ph="INSERT INTO users... " />
-            <marker date="1524962384874" expanded="true" signature="2443:3059" ph="..." />
-            <marker date="1524962384874" expanded="true" signature="2474:2609" ph="..." />
-            <marker date="1524962384874" expanded="true" signature="2610:3035" ph="..." />
-            <marker date="1524962384874" expanded="true" signature="2704:2841" ph="..." />
-            <marker date="1524962384874" expanded="true" signature="2974:2980" ph="©" />
-            <marker date="1524962384874" expanded="true" signature="3402:3503" ph="..." />
-            <marker date="1524962384874" expanded="true" signature="3622:3993" ph="..." />
-            <marker date="1524962384874" expanded="true" signature="3657:3958" ph="{&quot;title&quot;: \&quot;Congratulations EXTERNAL_FRAGMENT!\&quot;...}" />
-            <marker date="1524962384874" expanded="true" signature="4121:4574" ph="..." />
-            <marker date="1524962384874" expanded="true" signature="4164:4531" ph="{&quot;title&quot;: \&quot;Congratulations EXTERNAL_FRAGMENT\&quot;...}" />
-            <marker date="1524962384874" expanded="true" signature="5178:5472" ph="..." />
-            <marker date="1524962384874" expanded="true" signature="5205:5442" ph="{&quot;text&quot;: 'This request originates from an unknown source, possible attack'...}" />
-            <marker date="1524962384874" expanded="true" signature="5737:5806" ph="UPDATE users... " />
-            <marker date="1524962384874" expanded="true" signature="6207:6301" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -984,14 +905,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/auth/partials/parseSignUp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="39" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="9" selection-end-column="39" />
+          <folding>
+            <element signature="e#1030#5082#0#PHP" expanded="false" />
+            <element signature="e#1207#5082#0#PHP" expanded="false" />
+            <element signature="e#1479#5082#0#PHP" expanded="false" />
+            <element signature="e#1636#4743#0#PHP" expanded="false" />
+            <element signature="e#4622#4743#0#PHP" expanded="false" />
+            <element signature="e#4762#5082#0#PHP" expanded="false" />
+            <marker date="1524962384874" expanded="true" signature="1671:1795" ph="INSERT INTO users... " />
+            <marker date="1524962384874" expanded="true" signature="2443:3059" ph="..." />
+            <marker date="1524962384874" expanded="true" signature="2474:2609" ph="..." />
+            <marker date="1524962384874" expanded="true" signature="2610:3035" ph="..." />
+            <marker date="1524962384874" expanded="true" signature="2704:2841" ph="..." />
+            <marker date="1524962384874" expanded="true" signature="2974:2980" ph="©" />
+            <marker date="1524962384874" expanded="true" signature="3402:3503" ph="..." />
+            <marker date="1524962384874" expanded="true" signature="3622:3993" ph="..." />
+            <marker date="1524962384874" expanded="true" signature="3657:3958" ph="{&quot;title&quot;: \&quot;Congratulations EXTERNAL_FRAGMENT!\&quot;...}" />
+            <marker date="1524962384874" expanded="true" signature="4121:4574" ph="..." />
+            <marker date="1524962384874" expanded="true" signature="4164:4531" ph="{&quot;title&quot;: \&quot;Congratulations EXTERNAL_FRAGMENT\&quot;...}" />
+            <marker date="1524962384874" expanded="true" signature="5178:5472" ph="..." />
+            <marker date="1524962384874" expanded="true" signature="5205:5442" ph="{&quot;text&quot;: 'This request originates from an unknown source, possible attack'...}" />
+            <marker date="1524962384874" expanded="true" signature="5737:5806" ph="UPDATE users... " />
+            <marker date="1524962384874" expanded="true" signature="6207:6301" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="15" column="91" lean-forward="false" selection-start-line="15" selection-start-column="91" selection-end-line="15" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/signup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="107" />
+          <folding>
+            <marker date="1524962500272" expanded="true" signature="141:142" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/auth/partials/parsePasswordReset.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="58" lean-forward="true" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+        <state relative-caret-position="489">
+          <caret line="51" column="87" lean-forward="true" selection-start-line="50" selection-start-column="24" selection-end-line="51" selection-end-column="87" />
           <folding>
-            <element signature="e#268#4425#0#PHP" expanded="false" />
-            <element signature="e#807#4026#0#PHP" expanded="false" />
-            <element signature="e#1268#3716#0#PHP" expanded="false" />
             <element signature="e#3442#3716#0#PHP" expanded="false" />
             <element signature="e#3749#4026#0#PHP" expanded="false" />
             <element signature="e#4037#4425#0#PHP" expanded="false" />
@@ -1025,11 +991,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auth/index.php">
+    <entry file="file://$PROJECT_DIR$/auth/resource/utilities.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="15" column="91" lean-forward="false" selection-start-line="15" selection-start-column="91" selection-end-line="15" selection-end-column="91" />
-          <folding />
+        <state relative-caret-position="153">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#139#0#PHP" expanded="false" />
+            <element signature="n#check_empty_fields#0;n#!!top" expanded="false" />
+            <element signature="e#567#669#0#PHP" expanded="false" />
+            <element signature="e#1172#1212#0#PHP" expanded="false" />
+            <element signature="n#check_email#0;n#!!top" expanded="false" />
+            <element signature="e#1942#2056#0#PHP" expanded="false" />
+            <element signature="n#show_errors#0;n#!!top" expanded="false" />
+            <element signature="e#2348#2371#0#PHP" expanded="false" />
+            <element signature="n#debug_to_console#0;n#!!top" expanded="false" />
+            <element signature="e#2584#2657#0#PHP" expanded="false" />
+            <element signature="n#flashMessage#0;n#!!top" expanded="false" />
+            <element signature="e#2934#2957#0#PHP" expanded="false" />
+            <element signature="n#redirectTo#0;n#!!top" expanded="false" />
+            <element signature="e#3027#3121#0#PHP" expanded="false" />
+            <element signature="n#checkDuplicateEntries#0;n#!!top" expanded="false" />
+            <element signature="e#3627#3653#0#PHP" expanded="false" />
+            <element signature="n#rememberMe#0;n#!!top" expanded="false" />
+            <element signature="e#3880#3917#0#PHP" expanded="false" />
+            <element signature="n#isCookieValid#0;n#!!top" expanded="false" />
+            <element signature="e#4884#4894#0#PHP" expanded="false" />
+            <element signature="n#signOut#0;n#!!top" expanded="false" />
+            <element signature="e#5227#5250#0#PHP" expanded="false" />
+            <element signature="n#guard#0;n#!!top" expanded="false" />
+            <element signature="e#5836#5876#0#PHP" expanded="false" />
+            <element signature="n#isValidImage#0;n#!!top" expanded="false" />
+            <element signature="e#6319#6362#0#PHP" expanded="false" />
+            <marker date="1524961687702" expanded="true" signature="2126:2137" ph="..." />
+            <marker date="1524961687702" expanded="true" signature="3225:3238" ph="SELECT * FRO... " />
+            <marker date="1524961687702" expanded="true" signature="3225:3239" ph="SELECT * FRO... ${$table}" />
+            <marker date="1524961687702" expanded="true" signature="3225:3257" ph="SELECT * FRO... ${$table}" />
+            <marker date="1524961687702" expanded="true" signature="3225:3258" ph="SELECT * FRO... ${$table}" />
+            <marker date="1524961687702" expanded="true" signature="3225:3277" ph="SELECT * FRO... users" />
+            <marker date="1524961687702" expanded="true" signature="4262:4295" ph="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/editProfile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="73" column="47" lean-forward="false" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="47" />
+          <folding>
+            <element signature="n#div#0;n#form#0;n#section#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#input#0;n#div#0;n#form#0;n#section#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#form#0;n#section#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#form#0;n#section#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/partials/parseChangePassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+          <folding>
+            <element signature="e#4324#4598#0#PHP" expanded="false" />
+            <element signature="e#4631#4908#0#PHP" expanded="false" />
+            <element signature="e#4919#5307#0#PHP" expanded="false" />
+            <marker date="1525041133905" expanded="true" signature="1390:1431" ph="SELECT passw... users" />
+            <marker date="1525041133905" expanded="true" signature="2224:2274" ph="UPDATE users... " />
+            <marker date="1525041133905" expanded="true" signature="2837:3290" ph="..." />
+            <marker date="1525041133905" expanded="true" signature="2880:3247" ph="{&quot;title&quot;: \&quot;Operation Successful!\&quot;...}" />
+            <marker date="1525041133905" expanded="true" signature="3693:4129" ph="..." />
+            <marker date="1525041133905" expanded="true" signature="3736:4086" ph="{&quot;title&quot;: \&quot;OOPS!\&quot;...}" />
+            <marker date="1525041133905" expanded="true" signature="5004:5298" ph="..." />
+            <marker date="1525041133905" expanded="true" signature="5031:5268" ph="{&quot;text&quot;: 'This request originates from an unknown source, possible attack'...}" />
+          </folding>
         </state>
       </provider>
     </entry>

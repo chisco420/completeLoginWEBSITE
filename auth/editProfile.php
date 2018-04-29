@@ -2,6 +2,7 @@
 $page_title = "User Authentication - Edit Profile";
 include_once  'partials/headers.php';
 include_once  'partials/parseProfile.php';
+include_once  'partials/parseChangePassword.php';
 ?>
 
 <div class="container">
@@ -47,7 +48,52 @@ include_once  'partials/parseProfile.php';
                 <input type="hidden" name="hidden_id" value="<?php if(isset($id)) echo $id;?>">
                 <input type="hidden" name="token" value="<?php if(function_exists('_token')) echo _token();?>">
                 <button type="submit" name="updateProfileBtn" class="btn btn-primary pull-right">Update Profile</button>
+                <br/>
             </form>
+
+
+            <!-- Change password Area-->
+            <h3>Password Management</h3>
+            <hr/>
+            <form method="post" action="" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="currentPasswordField">Current Password</label>
+                    <input type="password"
+                           name="current_password"
+                           class="form-control"
+                           id="currentPasswordField"
+                           placeholder="Current Password">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="newPasswordField">New Password</label>
+                    <input type="password"
+                           name="new_password"
+                           class="form-control"
+                           id="newPasswordField"
+                           placeholder="New Password">
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPasswordField">Password</label>
+                    <input type="password"
+                           name="confirm_password"
+                           class="form-control"
+                           id="confirmPasswordField"
+                           placeholder="Confirm new Password">
+                </div>
+
+                <input type="hidden" name="hidden_id" value="<?php if(isset($id)) echo $id;?>">
+                <input type="hidden" name="token" value="<?php if(function_exists('_token')) echo _token();?>">
+                <button type="submit" name="changePasswordBtn" class="btn btn-primary pull-right">
+                    Change Password</button><br/>
+
+            </form>
+
+
+
+
         <?php endif ?>
     </section>
     <p><a href="index.php">Back</a></p>
