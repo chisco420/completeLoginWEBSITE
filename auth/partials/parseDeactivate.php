@@ -61,8 +61,8 @@ if (isset($_POST['deleteAccountBtn'], $_POST['token']))
                             swal({
                             title: \"Dear $username!\",
                             text: \"Your account Information will be kept for 14 days, if you wish to continue using this system login within the next 14 days to reactivate your account or it will be permanently deleted\",
-                            type: \"success\",
-                            confirmButtonText: \"Thank You!\" });
+                            icon: \"success\",
+                            button: \"Thank You!\" });
                         </script>";
                         }
                     }
