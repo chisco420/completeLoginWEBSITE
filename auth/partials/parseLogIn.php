@@ -38,37 +38,29 @@ if (isset($_POST['loginBtn'], $_POST['token']))
                 $username = $row['username'];
                 $activated = $row['activated'];
 
-                IF ($activated === "0") {
-                    $result = flashMessage("Please activate your account");
+                IF ($activated === "0")
+                {
+                    if (checkDuplicateEntries('deactivatedusers','user_id',$id,$db ))
+                    {
+                        //activate the account
+                        $db-> exec("UPDATE users set activated= '1' where id=$id LIMIT 1");
+                        //remove from deactivated user
+                        $db->exec("DELETE FROM deactivatedusers where user_id = $id LIMIT 1");
+                        //login user
+                        prepLogin($id, $username, $remember);
+
+                    }
+                    else
+                    {
+                        $result = flashMessage("Please activate your account");
+                    }
                 } ELSE {
-                    IF (password_verify($password, $hashed_password)) {
-                        $_SESSION['id'] = $id;
-                        $_SESSION['username'] = $username;
-
-                        $fingerprint = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
-                        $_SESSION['last_active'] = time();
-                        $_SESSION['fingerprint'] = $fingerprint;
-
-                        //Remember me functionality
-                        IF ($remember === "yes") {
-                            rememberMe($id);
-                        }
-
-
-                        //call sweet alert
-                        ECHO $welcome = "<script type=\"text/javascript\">
-                                    swal({
-                                        text: \"You're being logged in.\",
-                                        title: \"Welcome back  $username\",
-                                        icon: \"success\",
-                                        timer: 4000,
-                                        buttons: false
-                                    });
-                                    setTimeout(function (){
-                                        window.location.href = 'index.php';
-                                        }, 3000);
-                                </script>";
-                    } ELSE {
+                    IF (password_verify($password, $hashed_password))
+                    {
+                        prepLogin($id, $username, $remember);
+                    }
+                    ELSE
+                    {
                         $result = flashMessage("You have entered an invalid password");
                     }
                 }

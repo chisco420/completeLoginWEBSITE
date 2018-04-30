@@ -151,14 +151,14 @@ else if(isset($_POST['passwordRecoveryBtn'], $_POST['token']))
 
                     //prepare email body
                     $mail_body = '<html>
-                <body style="background-color:#CCCCCC; color:#000; font-family: Arial, Helvetica, sans-serif;
-                                    line-height:1.8em;">
-                <h2>User Authentication: Code A Secured Login System</h2>
-                <p>Dear '.$username.'<br><br>to reset your login password, please click on the link below:</p>
-                <p><a href="http://localhost/auth/passwordreset.php?id='.$encode_id.'">Reset Password</a></p>
-                <p><strong>&copy;2018 Family Recipes</strong></p>
-                </body>
-                </html>';
+                    <body style="background-color:#CCCCCC; color:#000; font-family: Arial, Helvetica, sans-serif;
+                                        line-height:1.8em;">
+                    <h2>User Authentication: Code A Secured Login System</h2>
+                    <p>Dear '.$username.'<br><br>to reset your login password, please click on the link below:</p>
+                    <p><a href="http://localhost/auth/passwordreset.php?id='.$encode_id.'">Reset Password</a></p>
+                    <p><strong>&copy;2018 Family Recipes</strong></p>
+                    </body>
+                    </html>';
 
                     $mail -> addAddress($email, $username);
                     $mail -> Subject = "Password Recovery Message from Family Recipes";

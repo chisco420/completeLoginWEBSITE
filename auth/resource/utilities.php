@@ -225,7 +225,7 @@ function signOut()
 function guard()
 {
     $isValid = true;
-    $inactive = 60*2; //2 mins
+    $inactive = 60*5; //2 mins
     $fingerprint = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
 
     if (isset($_SESSION['fingerprint']) && $_SESSION['fingerprint'] != $fingerprint)
@@ -313,4 +313,39 @@ function validateToken($requestToken)
     }
 
     return false;
+}
+
+/**
+ * @param $id
+ * @param $username
+ * @param $rememberMe
+ */
+function prepLogin($id, $username, $rememberMe)
+{
+    $_SESSION['id'] = $id;
+    $_SESSION['username'] = $username;
+
+    $fingerprint = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
+    $_SESSION['last_active'] = time();
+    $_SESSION['fingerprint'] = $fingerprint;
+
+    //Remember me functionality
+    IF ($rememberMe === "yes") {
+        rememberMe($id);
+    }
+
+
+    //call sweet alert
+    ECHO $welcome = "<script type=\"text/javascript\">
+                                    swal({
+                                        text: \"You're being logged in.\",
+                                        title: \"Welcome back  $username\",
+                                        icon: \"success\",
+                                        timer: 4000,
+                                        buttons: false
+                                    });
+                                    setTimeout(function (){
+                                        window.location.href = 'index.php';
+                                        }, 3000);
+                                </script>";
 }

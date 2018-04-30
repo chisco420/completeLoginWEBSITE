@@ -3,6 +3,7 @@ $page_title = "User Authentication - Edit Profile";
 include_once  'partials/headers.php';
 include_once  'partials/parseProfile.php';
 include_once  'partials/parseChangePassword.php';
+include_once  'partials/parseDeactivate.php';
 ?>
 
 <div class="container">
@@ -65,7 +66,6 @@ include_once  'partials/parseChangePassword.php';
                            placeholder="Current Password">
                 </div>
 
-
                 <div class="form-group">
                     <label for="newPasswordField">New Password</label>
                     <input type="password"
@@ -86,12 +86,19 @@ include_once  'partials/parseChangePassword.php';
 
                 <input type="hidden" name="hidden_id" value="<?php if(isset($id)) echo $id;?>">
                 <input type="hidden" name="token" value="<?php if(function_exists('_token')) echo _token();?>">
-                <button type="submit" name="changePasswordBtn" class="btn btn-primary pull-right">
-                    Change Password</button><br/>
-
+                <button type="submit"
+                        name="changePasswordBtn"
+                        class="btn btn-primary pull-right">Change Password</button><br/>
             </form>
-
-
+            <hr/>
+            <!--Deactivate Account Area-->
+            <form method="post" action="" enctype="multipart/form-data">
+                <input type="hidden" name="hidden_id" value="<?php if(isset($id)) echo $id;?>">
+                <input type="hidden" name="token" value="<?php if(function_exists('_token')) echo _token();?>">
+                <button onclick="return confirm('Do you really want to deactivate your account?')"
+                        type="submit" name="deleteAccountBtn" class="btn btn-danger btn-block pull-right">
+                    Deactivate Your Account</button> <br/>
+            </form>
 
 
         <?php endif ?>
