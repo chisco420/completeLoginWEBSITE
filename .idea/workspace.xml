@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c8a0408-bffc-4d86-9bb8-72a4b98f981a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/auth/auto_delete.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/auth/deactivate_account.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/auth/update_password.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/auth/uploads/demo2.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/editProfile.php" afterPath="$PROJECT_DIR$/auth/editProfile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/partials/parseDeactivate.php" afterPath="$PROJECT_DIR$/auth/partials/parseDeactivate.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/profile.php" afterPath="$PROJECT_DIR$/auth/profile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/auto_delete.php" afterPath="$PROJECT_DIR$/auth/auto_delete.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,7 +37,7 @@
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="register@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="register" type="e3449647:DbNodeDescriptor" />
-        <item name="users" type="e3449647:DbNodeDescriptor" />
+        <item name="feedback" type="e3449647:DbNodeDescriptor" />
       </path>
     </expand>
     <select />
@@ -53,11 +47,9 @@
       <file leaf-file-name="editProfile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auth/editProfile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1377">
+            <state relative-caret-position="918">
               <caret line="54" column="27" lean-forward="false" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
-              <folding>
-                <element signature="n#div#0;n#section#0;n#div#0;n#!!top" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,8 +57,8 @@
       <file leaf-file-name="parseProfile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auth/partials/parseProfile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="25" column="44" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="44" />
+            <state relative-caret-position="425">
+              <caret line="25" column="44" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="44" />
               <folding>
                 <marker date="1524962757381" expanded="true" signature="494:528" ph="SELECT * FRO... users" />
                 <marker date="1524962757381" expanded="true" signature="2680:2744" ph="UPDATE users... " />
@@ -82,14 +74,9 @@
       <file leaf-file-name="profile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auth/profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
+            <state relative-caret-position="459">
               <caret line="27" column="74" lean-forward="false" selection-start-line="27" selection-start-column="74" selection-end-line="27" selection-end-column="74" />
-              <folding>
-                <element signature="e#1364#1370#0#HTML" expanded="true" />
-                <element signature="e#1371#1377#0#HTML" expanded="true" />
-                <element signature="e#1601#1607#0#HTML" expanded="true" />
-                <element signature="e#1608#1614#0#HTML" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -117,7 +104,7 @@
       <file leaf-file-name="parseDeactivate.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auth/partials/parseDeactivate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="994">
+            <state relative-caret-position="1088">
               <caret line="64" column="34" lean-forward="false" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
               <folding>
                 <marker date="1525058470316" expanded="true" signature="307:341" ph="SELECT * fro... users" />
@@ -142,7 +129,7 @@
       <file leaf-file-name="parseLogIn.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auth/partials/parseLogIn.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
+            <state relative-caret-position="136">
               <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
               <folding>
                 <element signature="e#164#3206#0#PHP" expanded="false" />
@@ -165,15 +152,19 @@
       <file leaf-file-name="auto_delete.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/auth/auto_delete.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
-              <caret line="40" column="6" lean-forward="false" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+            <state relative-caret-position="1164">
+              <caret line="49" column="27" lean-forward="false" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
               <folding>
-                <marker date="1525061003478" expanded="true" signature="119:209" ph="SELECT user_... deactivatedusers" />
-                <marker date="1525061003478" expanded="true" signature="119:213" ph="SELECT user_... deactivatedusers" />
-                <marker date="1525061003478" expanded="true" signature="353:387" ph="SELECT * fro... users" />
-                <marker date="1525061003478" expanded="true" signature="757:802" ph="DELETE FROM " />
-                <marker date="1525061003478" expanded="true" signature="757:813" ph="DELETE FROM " />
-                <marker date="1525061003478" expanded="true" signature="841:901" ph="DELETE FROM " />
+                <marker date="1525115266524" expanded="true" signature="119:209" ph="SELECT user_... deactivatedusers" />
+                <marker date="1525115266524" expanded="true" signature="119:213" ph="SELECT user_... deactivatedusers" />
+                <marker date="1525115266524" expanded="true" signature="353:387" ph="SELECT * fro... users" />
+                <marker date="1525115266524" expanded="true" signature="767:812" ph="DELETE FROM " />
+                <marker date="1525115266524" expanded="true" signature="767:823" ph="DELETE FROM " />
+                <marker date="1525115266524" expanded="true" signature="851:911" ph="DELETE FROM " />
+                <marker date="1525115266524" expanded="true" signature="1205:1284" ph="SELECT user_... deactivatedusers" />
+                <marker date="1525115266524" expanded="true" signature="1205:1304" ph="SELECT id, u... users" />
+                <marker date="1525115266524" expanded="true" signature="1479:1513" ph="SELECT * fro... users" />
+                <marker date="1525115266524" expanded="true" signature="1702:1767" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -182,8 +173,8 @@
       <file leaf-file-name="parsePasswordReset.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auth/partials/parsePasswordReset.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="179" column="21" lean-forward="true" selection-start-line="151" selection-start-column="18" selection-end-line="179" selection-end-column="21" />
+            <state relative-caret-position="2941">
+              <caret line="179" column="21" lean-forward="false" selection-start-line="151" selection-start-column="18" selection-end-line="179" selection-end-column="21" />
               <folding>
                 <element signature="e#3749#4026#0#PHP" expanded="false" />
               </folding>
@@ -194,7 +185,7 @@
       <file leaf-file-name="utilities.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auth/resource/utilities.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="3978">
               <caret line="322" column="5" lean-forward="false" selection-start-line="322" selection-start-column="5" selection-end-line="322" selection-end-column="5" />
               <folding>
                 <element signature="n#isCookieValid#0;n#!!top" expanded="false" />
@@ -237,6 +228,7 @@
       <find>confirm_password</find>
       <find>*60</find>
       <find>*2</find>
+      <find>$result</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -299,10 +291,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7.2" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1910" />
-    <option name="y" value="138" />
-    <option name="width" value="1942" />
-    <option name="height" value="2034" />
+    <option name="x" value="2880" />
+    <option name="y" value="458" />
+    <option name="width" value="1400" />
+    <option name="height" value="938" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -323,6 +315,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -357,7 +350,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -416,7 +408,8 @@
       <option name="presentableId" value="Default" />
       <updated>1523914749620</updated>
       <workItem from="1523914754185" duration="19025000" />
-      <workItem from="1524012566428" duration="84839000" />
+      <workItem from="1524012566428" duration="85474000" />
+      <workItem from="1525114247872" duration="1617000" />
     </task>
     <task id="LOCAL-00001" summary="initial version">
       <created>1523920300160</created>
@@ -495,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1525047976444</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Delete deactivated accounts">
+      <created>1525061037900</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1525061037900</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -504,14 +504,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103864000" />
+    <option name="totallyTimeSpent" value="106116000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="63" width="1933" height="1024" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1776" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1792" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.49706668" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5029333" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26293334" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -522,6 +521,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39954075" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.49706668" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -554,7 +554,8 @@
     <MESSAGE value="Protect against CSRF..token" />
     <MESSAGE value="Update password from profile manager" />
     <MESSAGE value="Deactivate and activate accounts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deactivate and activate accounts" />
+    <MESSAGE value="Delete deactivated accounts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete deactivated accounts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -570,6 +571,106 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/auth/update_password.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/partials/parseDeactivate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="64" column="34" lean-forward="false" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+          <folding>
+            <marker date="1525058470316" expanded="true" signature="307:341" ph="SELECT * fro... users" />
+            <marker date="1525058470316" expanded="true" signature="684:738" ph="UPDATE users... " />
+            <marker date="1525058470316" expanded="true" signature="1006:1062" ph="INSERT INTO deactivatedusers... " />
+            <marker date="1525058470316" expanded="true" signature="1006:1129" ph="INSERT INTO deactivatedusers... " />
+            <marker date="1525058470316" expanded="true" signature="1368:2217" ph="..." />
+            <marker date="1525058470316" expanded="true" signature="1407:1550" ph="..." />
+            <marker date="1525058470316" expanded="true" signature="1551:2185" ph="..." />
+            <marker date="1525058470316" expanded="true" signature="1661:1994" ph="..." />
+            <marker date="1525058470316" expanded="true" signature="2116:2122" ph="©" />
+            <marker date="1525058470316" expanded="true" signature="2626:2735" ph="..." />
+            <marker date="1525058470316" expanded="true" signature="2866:3316" ph="..." />
+            <marker date="1525058470316" expanded="true" signature="2901:3281" ph="{&quot;title&quot;: \&quot;Dear $!\&quot;...}" />
+            <marker date="1525058470316" expanded="true" signature="4033:4327" ph="..." />
+            <marker date="1525058470316" expanded="true" signature="4060:4297" ph="{&quot;text&quot;: 'This request originates from an unknown source, possible attack'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/partials/parseLogIn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding>
+            <element signature="e#164#3206#0#PHP" expanded="false" />
+            <element signature="e#2371#2483#0#PHP" expanded="false" />
+            <element signature="e#2818#3206#0#PHP" expanded="false" />
+            <marker date="1525047260488" expanded="true" signature="854:899" ph="SELECT * FRO... users" />
+            <marker date="1525047260488" expanded="true" signature="1492:1533" ph="UPDATE users... " />
+            <marker date="1525047260488" expanded="true" signature="1492:1534" ph="UPDATE users... " />
+            <marker date="1525047260488" expanded="true" signature="1492:1544" ph="UPDATE users... " />
+            <marker date="1525047260488" expanded="true" signature="1638:1683" ph="DELETE FROM " />
+            <marker date="1525047260488" expanded="true" signature="1638:1684" ph="DELETE FROM " />
+            <marker date="1525047260488" expanded="true" signature="1638:1694" ph="DELETE FROM " />
+            <marker date="1525047260488" expanded="true" signature="2903:3197" ph="..." />
+            <marker date="1525047260488" expanded="true" signature="2930:3167" ph="{&quot;text&quot;: 'This request originates from an unknown source, possible attack'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/partials/parsePasswordReset.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2941">
+          <caret line="179" column="21" lean-forward="true" selection-start-line="151" selection-start-column="18" selection-end-line="179" selection-end-column="21" />
+          <folding>
+            <element signature="e#3749#4026#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/resource/utilities.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5474">
+          <caret line="322" column="5" lean-forward="false" selection-start-line="322" selection-start-column="5" selection-end-line="322" selection-end-column="5" />
+          <folding>
+            <element signature="n#isCookieValid#0;n#!!top" expanded="false" />
+            <element signature="n#signOut#0;n#!!top" expanded="false" />
+            <element signature="n#guard#0;n#!!top" expanded="false" />
+            <element signature="n#isValidImage#0;n#!!top" expanded="false" />
+            <marker date="1525047189074" expanded="true" signature="2126:2137" ph="..." />
+            <marker date="1525047189074" expanded="true" signature="3225:3277" ph="SELECT * FRO... ${$table}" />
+            <marker date="1525047189074" expanded="true" signature="4262:4295" ph="SELECT * FRO... users" />
+            <marker date="1525047189074" expanded="true" signature="7677:8306" ph="..." />
+            <marker date="1525047189074" expanded="true" signature="7720:8077" ph="{&quot;text&quot;: \&quot;You're being logged in.\&quot;...}" />
+            <marker date="1525047189074" expanded="true" signature="8138:8257" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/auto_delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="6" lean-forward="false" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+          <folding>
+            <marker date="1525115266524" expanded="true" signature="119:209" ph="SELECT user_... deactivatedusers" />
+            <marker date="1525115266524" expanded="true" signature="119:213" ph="SELECT user_... deactivatedusers" />
+            <marker date="1525115266524" expanded="true" signature="353:387" ph="SELECT * fro... users" />
+            <marker date="1525115266524" expanded="true" signature="767:812" ph="DELETE FROM " />
+            <marker date="1525115266524" expanded="true" signature="767:823" ph="DELETE FROM " />
+            <marker date="1525115266524" expanded="true" signature="851:911" ph="DELETE FROM " />
+            <marker date="1525115266524" expanded="true" signature="1205:1284" ph="SELECT user_... deactivatedusers" />
+            <marker date="1525115266524" expanded="true" signature="1205:1304" ph="SELECT id, u... users" />
+            <marker date="1525115266524" expanded="true" signature="1479:1513" ph="SELECT * fro... users" />
+            <marker date="1525115266524" expanded="true" signature="1702:1767" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/auth/resource/Database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -671,7 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1887">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -679,23 +779,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auth/css/starter-template.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/css/starter-template.css" />
     <entry file="file://$PROJECT_DIR$/auth/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -719,7 +810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -748,7 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -756,18 +845,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auth/mail/snippet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="56" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/mail/snippet.php" />
     <entry file="file://$PROJECT_DIR$/auth/activate.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -888,8 +969,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/auth/partials/parsePasswordReset.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="179" column="21" lean-forward="true" selection-start-line="151" selection-start-column="18" selection-end-line="179" selection-end-column="21" />
+        <state relative-caret-position="2941">
+          <caret line="179" column="21" lean-forward="false" selection-start-line="151" selection-start-column="18" selection-end-line="179" selection-end-column="21" />
           <folding>
             <element signature="e#3749#4026#0#PHP" expanded="false" />
           </folding>
@@ -898,7 +979,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/auth/resource/utilities.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="3978">
           <caret line="322" column="5" lean-forward="false" selection-start-line="322" selection-start-column="5" selection-end-line="322" selection-end-column="5" />
           <folding>
             <element signature="n#isCookieValid#0;n#!!top" expanded="false" />
@@ -917,7 +998,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/auth/partials/parseLogIn.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
+        <state relative-caret-position="136">
           <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
           <folding>
             <element signature="e#164#3206#0#PHP" expanded="false" />
@@ -938,14 +1019,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/auth/profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
+        <state relative-caret-position="459">
           <caret line="27" column="74" lean-forward="false" selection-start-line="27" selection-start-column="74" selection-end-line="27" selection-end-column="74" />
-          <folding>
-            <element signature="e#1364#1370#0#HTML" expanded="true" />
-            <element signature="e#1371#1377#0#HTML" expanded="true" />
-            <element signature="e#1601#1607#0#HTML" expanded="true" />
-            <element signature="e#1608#1614#0#HTML" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -975,7 +1051,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/auth/partials/parseDeactivate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="994">
+        <state relative-caret-position="1088">
           <caret line="64" column="34" lean-forward="false" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
           <folding>
             <marker date="1525058470316" expanded="true" signature="307:341" ph="SELECT * fro... users" />
@@ -998,18 +1074,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/auth/editProfile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
+        <state relative-caret-position="918">
           <caret line="54" column="27" lean-forward="false" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
-          <folding>
-            <element signature="n#div#0;n#section#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/auth/partials/parseProfile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="25" column="44" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="44" />
+        <state relative-caret-position="425">
+          <caret line="25" column="44" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="44" />
           <folding>
             <marker date="1524962757381" expanded="true" signature="494:528" ph="SELECT * FRO... users" />
             <marker date="1524962757381" expanded="true" signature="2680:2744" ph="UPDATE users... " />
@@ -1023,15 +1097,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/auth/auto_delete.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="40" column="6" lean-forward="false" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+        <state relative-caret-position="1164">
+          <caret line="49" column="27" lean-forward="false" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
           <folding>
-            <marker date="1525061003478" expanded="true" signature="119:209" ph="SELECT user_... deactivatedusers" />
-            <marker date="1525061003478" expanded="true" signature="119:213" ph="SELECT user_... deactivatedusers" />
-            <marker date="1525061003478" expanded="true" signature="353:387" ph="SELECT * fro... users" />
-            <marker date="1525061003478" expanded="true" signature="757:802" ph="DELETE FROM " />
-            <marker date="1525061003478" expanded="true" signature="757:813" ph="DELETE FROM " />
-            <marker date="1525061003478" expanded="true" signature="841:901" ph="DELETE FROM " />
+            <marker date="1525115266524" expanded="true" signature="119:209" ph="SELECT user_... deactivatedusers" />
+            <marker date="1525115266524" expanded="true" signature="119:213" ph="SELECT user_... deactivatedusers" />
+            <marker date="1525115266524" expanded="true" signature="353:387" ph="SELECT * fro... users" />
+            <marker date="1525115266524" expanded="true" signature="767:812" ph="DELETE FROM " />
+            <marker date="1525115266524" expanded="true" signature="767:823" ph="DELETE FROM " />
+            <marker date="1525115266524" expanded="true" signature="851:911" ph="DELETE FROM " />
+            <marker date="1525115266524" expanded="true" signature="1205:1284" ph="SELECT user_... deactivatedusers" />
+            <marker date="1525115266524" expanded="true" signature="1205:1304" ph="SELECT id, u... users" />
+            <marker date="1525115266524" expanded="true" signature="1479:1513" ph="SELECT * fro... users" />
+            <marker date="1525115266524" expanded="true" signature="1702:1767" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
