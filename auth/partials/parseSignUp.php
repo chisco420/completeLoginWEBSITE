@@ -68,15 +68,15 @@ if(isset($_POST['signupBtn'], $_POST['token']))
 
                     //prepare email body
                     $mail_body = '<html>
-                <body style="background-color:#CCCCCC; color:#000; font-family: Arial, Helvetica, sans-serif;
-                                    line-height:1.8em;">
-                <h2>User Authentication: Code A Secured Login System</h2>
-                <p>Dear '.$username.'<br><br>Thank you for registering, please click on the link below to
-                    confirm your email address</p>
-                <p><a href="http://localhost/auth/activate.php?id='.$encode_id.'">Confirm Email</a></p>
-                <p><strong>&copy;2018 Family Recipes</strong></p>
-                </body>
-                </html>';
+                    <body style="background-color:#CCCCCC; color:#000; font-family: Arial, Helvetica, sans-serif;
+                                        line-height:1.8em;">
+                    <h2>User Authentication: Code A Secured Login System</h2>
+                    <p>Dear '.$username.'<br><br>Thank you for registering, please click on the link below to
+                        confirm your email address</p>
+                    <p><a href="http://myfamilyrecipes.online/activate.php?id='.$encode_id.'">Confirm Email</a></p>
+                    <p><strong>&copy;2018 Family Recipes</strong></p>
+                    </body>
+                    </html>';
 
                     $mail -> addAddress($email, $username);
                     $mail -> Subject = "Message from Family Recipes";

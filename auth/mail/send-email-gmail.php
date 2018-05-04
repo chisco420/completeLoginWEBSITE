@@ -2,17 +2,17 @@
 require 'class.phpmailer.php';
 $mail = new PHPMailer();
 $mail->IsSMTP();
-$mail->Port = 465;
-$mail->Host = 'smtp.gmail.com';
-$mail->IsHTML(true);
 $mail->Mailer = 'smtp';
-$mail->SMTPSecure = 'ssl';
+$mail->SMTPSecure = 'tls';
+$mail->Port = 587;
+$mail->Host = "smtp.gmail.com";
+$mail->IsHTML(true);
+
 
 $mail->SMTPAuth = true;
-$mail->Username = "your_gmail_user_name@gmail.com";
-$mail->Password = "your_gmail_password";
+$mail->Username = "info.family.recipes@gmail.com";
+$mail->Password = "Zxcv@0987";
 
 //Sender Info
 $mail->From = "no-reply@ictdesignhub.com";
 $mail->FromName = "User Authentication";
-

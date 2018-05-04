@@ -274,36 +274,40 @@ function isValidImage($file)
     return $form_errors;
 }
 
+
 /**
  * @param $username
- * @return bool
+ * @return bool|string
  */
 function uploadAvatar($username)
 {
-    $isImageMoved = false;
-
     if ($_FILES['avatar']['tmp_name'])
     {
         $temp_file = $_FILES['avatar']['tmp_name'];
-        $ds = DIRECTORY_SEPARATOR; // uploads/
-        $avatar_name = $username .".jpg";
-        $path = "uploads".$ds.$avatar_name; //uploads/demo.jpg
+        $ext = pathinfo($_FILES['avatar']['name'], PATHINFO_EXTENSION);
+        $file_name = $username.md5(microtime()).".{$ext}";
+        $path = "uploads/{$file_name}"; //uploads/demo.jpg
 
-        if (move_uploaded_file($temp_file, $path))
-        {
-            $isImageMoved = true;
-        }
+        move_uploaded_file($temp_file, $path);
+
+        return $path;
     }
-
-    return $isImageMoved;
+    return false;
 }
 
+/**
+ * @return string
+ */
 function _token()
 {
     $randomToken = base64_encode(openssl_random_pseudo_bytes(32));
     return $_SESSION['token'] = $randomToken;
 }
 
+/**
+ * @param $requestToken
+ * @return bool
+ */
 function validateToken($requestToken)
 {
     if (isset($_SESSION['token']) && $requestToken === $_SESSION['token'])

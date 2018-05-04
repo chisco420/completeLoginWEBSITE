@@ -1,10 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Francisco
- * Date: 4/16/2018
- * Time: 3:39 PM
- */
+
+//$username = 'familyRecipes';
+//$dsn = 'mysql:host=localhost; dbname=DB_FamilyRecipes';
+//$password = 'Zxcv@0987';
+
+
 $username = 'yoga';
 $dsn = 'mysql:host=localhost; dbname=register';
 $password = '1234';

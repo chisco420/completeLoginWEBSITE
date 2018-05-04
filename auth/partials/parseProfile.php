@@ -20,20 +20,21 @@ if ((isset($_SESSION['id']) || isset($_GET['user_identity'])) && !isset($_POST['
     while ($rs = $statement->fetch()) {
         $username = $rs['username'];
         $email = $rs['email'];
+        $profile_picture = $rs['avatar'];
         $date_joined = strftime("%b %d, %Y", strtotime($rs["join_date"]));
     }
 
-    $user_pic = "uploads/".$username.".jpg";
-    $default = "uploads/default.jpg";
-
-    if (file_exists($user_pic))
-    {
-        $profile_picture= $user_pic;
-    }
-    else
-    {
-        $profile_picture = $default;
-    }
+//    $user_pic = "uploads/".$username.".jpg";
+//    $default = "uploads/default.jpg";
+//
+//    if (file_exists($user_pic))
+//    {
+//        $profile_picture= $user_pic;
+//    }
+//    else
+//    {
+//        $profile_picture = $default;
+//    }
 
 
     $encode_id = base64_encode("encodeuserid{$id}");
@@ -86,17 +87,59 @@ else if (isset($_POST['updateProfileBtn'], $_POST['token']))
         {
             try
             {
+                $query = "SELECT avatar FROM users WHERE id= :id";
+                $oldAvatarStatement = $db->prepare($query);
+                $oldAvatarStatement-> execute([':id' => $hidden_id]);
+
+                if ($rs = $oldAvatarStatement->fetch())
+                {
+                    $oldAvatar = $rs['avatar'];
+                }
+
                 //create SQL update
                 $sqlUpdate = "UPDATE users SET username= :username, email=:email WHERE id= :id";
 
                 //Use PDO prepared to sanitize data
                 $statement = $db ->prepare($sqlUpdate);
 
-                //update the record in the database
-                $statement -> execute(array(':username' => $username, ':email' => $email, ':id' => $hidden_id));
+
+
+                if ($avatar != null)
+                {
+                    //create SQL update
+                    $sqlUpdate = "UPDATE users SET username= :username, email=:email, avatar=:avatar WHERE id= :id";
+
+                    $avatar_path = uploadAvatar($username);
+                    if (!$avatar_path) {
+                        $avatar_path = 'uploads/default.jpg';
+                    }
+
+                    //Use PDO prepared to sanitize data
+                    $statement = $db->prepare($sqlUpdate);
+
+                    //update the record in the database
+                    $statement->execute(array(
+                        ':username' => $username,
+                        ':email' => $email,
+                        ':avatar' => $avatar_path,
+                        ':id' => $hidden_id));
+
+                    if (isset($oldAvatar))
+                    {
+                        unlink($oldAvatar);
+                    }
+
+
+                }
+                else
+                {
+                    //update the record in the database
+                    $statement -> execute(array(':username' => $username, ':email' => $email, ':id' => $hidden_id));
+                }
+
 
                 //check if one new row was created
-                if ($statement -> rowCount() == 1 || uploadAvatar($username))
+                if ($statement -> rowCount() == 1)
                 {
                     $result = "<script type=\"text/javascript\">
                 swal(\"Updated!\",\"Profile Updated Successfully.\", \"success\");</script>";

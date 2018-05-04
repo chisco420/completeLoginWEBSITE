@@ -1,5 +1,23 @@
 <?php
+
 require 'class.phpmailer.php';
+
+//WEBSITE
+//$mail = new PHPMailer();
+////$mail->SMTPDebug = 3;
+//$mail->IsSMTP();
+//$mail->Mailer = 'smtp';
+//$mail->Host = "localhost";
+//$mail->IsHTML(true);
+//
+////Sender Info
+//$mail->From = "info@myfamilyrecipes.online";
+//$mail->FromName = "User Authentication";
+
+
+
+
+/////LOCALHOST
 $mail = new PHPMailer();
 $mail->IsSMTP();
 $mail->Mailer = 'smtp';

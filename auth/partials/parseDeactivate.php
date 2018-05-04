@@ -41,7 +41,7 @@ if (isset($_POST['deleteAccountBtn'], $_POST['token']))
                         your account information will be kept for 14 days,
                         if you wish to continue using this system login within the next 14 days
                         to reactivate your account or it will be permanently deleted.</p>
-                        <p><a href="http://localhost/auth/login.php">Sign in</a></p>
+                        <p><a href="http://myfamilyrecipes.online/login.php">Sign in</a></p>
                         <p><strong>&copy;2018 Family Recipes</strong></p>
                         </body>
                         </html>';
@@ -62,7 +62,11 @@ if (isset($_POST['deleteAccountBtn'], $_POST['token']))
                             title: \"Dear $username!\",
                             text: \"Your account Information will be kept for 14 days, if you wish to continue using this system login within the next 14 days to reactivate your account or it will be permanently deleted\",
                             icon: \"success\",
-                            button: \"Thank You!\" });
+                            timer: 4000
+                            buttons: false });
+                            setTimeout(function()){
+                                window.location.href = 'logout.php';
+                            },3000);
                         </script>";
                         }
                     }

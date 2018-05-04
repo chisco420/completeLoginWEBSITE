@@ -2,15 +2,8 @@
 $page_title = "User Authentication - Password Reset";
 include_once 'partials/headers.php';
 include_once 'partials/parsePasswordReset.php';
-
-if (isset($_GET['id']))
-{
-    $encoded_id = $_GET['id'];
-    $decoded_id = base64_decode($encoded_id);
-    $id_array = explode("encodeuserid",$decoded_id);
-    $id = $id_array[1];
-}
 ?>
+
 
 <div class="container">
     <section class="col col-lg-7">
@@ -25,6 +18,17 @@ if (isset($_GET['id']))
         <form action="" method="post">
 
             <div class="form-group">
+                <label for="emailField">Email</label>
+                <input type="text" class="form-control" name="email" id="emailField" placeholder="Your email address">
+            </div>
+
+            <div class="form-group">
+                <label for="tokenField">Token</label>
+                <input type="text" class="form-control" name="reset_token" id="tokenField" placeholder="Reset Token">
+            </div>
+
+
+            <div class="form-group">
                 <label for="new_passwordField">New password</label>
                 <input type="password" class="form-control" name="new_password" id="new_passwordField" placeholder="Password">
             </div>
@@ -33,7 +37,7 @@ if (isset($_GET['id']))
                 <label for="confirm_passwordField">Confirm password</label>
                 <input type="password" class="form-control" name="confirm_password" id="confirm_passwordField" placeholder="Confirm password">
             </div>
-            <input type="hidden" name="user_id" value="<?php if(isset($id)) echo $id?>">
+
             <input type="hidden" name="token" value="<?php if(function_exists('_token')) echo _token();?>">
             <button type="submit" name="passwordResetBtn" class="btn btn-primary pull-right">Reset Password</button>
         </form>
