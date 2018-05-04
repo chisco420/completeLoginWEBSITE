@@ -2,7 +2,25 @@
 include_once 'resource/Database.php';
 include_once 'resource/utilities.php';
 
-if ((isset($_SESSION['id']) || isset($_GET['user_identity'])) && !isset($_POST['updateProfileBtn']))
+
+if (isset($_GET['u']))
+{
+    $username = $_GET['u'];
+    $sqlQuery = "SELECT * FROM users WHERE username = :username";
+    $statement = $db->prepare($sqlQuery);
+    $statement->execute(array(':username' => $username));
+
+    while ($rs = $statement->fetch()) {
+        $username = $rs['username'];
+        $profile_picture = $rs['avatar'];
+        $date_joined = strftime("%b %d, %Y", strtotime($rs["join_date"]));
+
+        $rs['activated'] = 1 ? $status = "Activated" :$status = "Not Activated";
+
+    }
+}
+
+elseif ((isset($_SESSION['id']) || isset($_GET['user_identity'])) && !isset($_POST['updateProfileBtn']))
 {
     if (isset($_GET['user_identity'])) {
         $url_encoded_id = $_GET['user_identity'];
@@ -45,14 +63,14 @@ else if (isset($_POST['updateProfileBtn'], $_POST['token']))
     //validate the token
     if (validateToken($_POST['token']))
     {
-        if (isset($_GET['user_identity'])) {
-            $url_encoded_id = $_GET['user_identity'];
-            $decode_id = base64_decode($url_encoded_id);
-            $user_id_array = explode("encodeuserid", $decode_id);
-            $id = $user_id_array[1];
-        } else {
-            $id = $_SESSION['id'];
-        }
+//        if (isset($_GET['user_identity'])) {
+//            $url_encoded_id = $_GET['user_identity'];
+//            $decode_id = base64_decode($url_encoded_id);
+//            $user_id_array = explode("encodeuserid", $decode_id);
+//            $id = $user_id_array[1];
+//        } else {
+//            $id = $_SESSION['id'];
+//        }
 
         //initialize an array to store any error message from the form
         $form_errors = array();
@@ -142,12 +160,19 @@ else if (isset($_POST['updateProfileBtn'], $_POST['token']))
                 if ($statement -> rowCount() == 1)
                 {
                     $result = "<script type=\"text/javascript\">
-                swal(\"Updated!\",\"Profile Updated Successfully.\", \"success\");</script>";
+                    swal(\"Updated!\",\"Profile Updated Successfully.\", \"success\");</script>";
                 }
                 else
                 {
                     $result = "<script type=\"text/javascript\">
-                swal(\"Nothing happened!\",\"You have not made any changes.\");</script>";
+                        swal({
+                        title: \"Nothing happened!\",
+                        text:\"You have not made any changes.\"})
+                        .then(function() {
+                          //redirect
+                          window.location.replace(window.location.href);
+                        })
+                        ;</script>";
                 }
 
             }

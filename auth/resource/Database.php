@@ -4,16 +4,20 @@
 //$dsn = 'mysql:host=localhost; dbname=DB_FamilyRecipes';
 //$password = 'Zxcv@0987';
 
+$config = require __DIR__.'/../config/app.php';
 
-$username = 'yoga';
-$dsn = 'mysql:host=localhost; dbname=register';
-$password = '1234';
+$driver = $config['database']['driver'];
+$host   = $config['database']['host'];
+$dbname = $config['database']['dbname'];
+$db_username = $config['database']['username'];
+$db_password = $config['database']['password'];
 
 
+$dsn = "{$driver}:host={$host};dbname={$dbname}";
 
 try
 {
-    $db = new PDO($dsn, $username, $password);
+    $db = new PDO($dsn, $db_username, $db_password);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     //echo "Connected to the REGISTER database";

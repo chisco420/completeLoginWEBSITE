@@ -41,12 +41,14 @@ include_once 'resource/utilities.php';?>
                 <li><a href="index.php">Home</a></li>
                 <?php if ((isset($_SESSION['username']) || isCookieValid($db))): ?>
                     <li><a href="profile.php">My Profile</a></li>
+                    <li><a href="members.php">Members</a></li>
                     <li><a href="logout.php">Log out</a></li>
                 <?php else: ?>
                     <li><a href="#">About</a></li>
+                    <li><a href="members.php">Members</a></li>
                     <li><a href="login.php">Log in</a></li>
                     <li><a href="signup.php">Sign up</a></li>
-                    <li><a href="#">Contact</a></li>
+
                 <?php endif ?>
             </ul>
         </div><!--/.nav-collapse -->
