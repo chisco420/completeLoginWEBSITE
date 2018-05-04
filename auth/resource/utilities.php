@@ -55,7 +55,7 @@ function check_email($data)
         if ($_POST[$key] != NULL)
         {
             //Remove illegal chars
-            $key = filter_var($key, FILTER_SANITIZE_EMAIL);
+            filter_var($_POST[$key], FILTER_SANITIZE_EMAIL);
 
             //check if input is valid email
             if (filter_var($_POST[$key],FILTER_VALIDATE_EMAIL) === false)
